@@ -1,0 +1,26 @@
+{
+  "name": "@b-stud/bezier-canvas",
+  "version": "1.0.0",
+  "description": "Transform an HTML5 canvas into a Bezier drawing surface, import & export splines, custom view.",
+  "keywords": "b-stud bstud @bstud @b-stud bezier canvas",
+  "main": "dist/bezier-canvas.min.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Bilel OURAL <bilel.oural@b-stud.com> (http://www.b-stud.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b-stud/bezier-canvas.git"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "bower": "^1.8.2",
+    "ts-loader": "^3.1.1",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {}
+}

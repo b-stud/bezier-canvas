@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bezier Canvas demonstration file</title>
+    <style type="text/css">
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #canvas {
+            border: 1px solid black;
+            background: transparent;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript" src="../../../dist/bezier-canvas.min.js"></script>
+<script type="text/javascript">
+    const options = {
+        historySize: 50,
+        naturalDrawMode: true,
+        maxDistance: 10,
+        smoothFactor: 0.5,
+        constraintTangents: true,
+
+        constructionPointSize: 20,
+        constructionPointBorderSize: 5,
+        constructionPointBorderColor: 'rgb(0, 0, 230)',
+        constructionPointFillColor: 'rgb(0, 0, 250)',
+        constructionPointActiveFillColor: 'cyan',
+        constructionPointActiveBorderColor: 'rgb(100, 120, 255)',
+        constructionPointShape: 'square',
+
+        controlPointBorderColor: 'rgb(0, 0, 0)',
+        controlPointFillColor: 'rgb(0, 0, 0)',
+        controlPointActiveFillColor: 'rgb(0,0, 0)',
+        controlPointActiveBorderColor: 'rgb(0, 0, 0)',
+        controlPointBorderSize: 0,
+        controlPointSize: 10,
+        controlPointShape: 'square',
+
+        tangentColor: 'rgb(0, 0, 0)',
+        tangentThickness: 2,
+
+        lineCap: 'round',
+        splineColor: 'rgb(0,50,255)',
+        splineThickness: 5,
+        showMaxPreviousTangents: 1 // Set -1 for all
+    };
+    const bezierCanvas = new BezierCanvas(document.getElementById("canvas"), options);
+    const paint = function () {
+        bezierCanvas.paint();
+        requestAnimationFrame(paint);
+    };
+    requestAnimationFrame(paint);
+</script>
+</body>
+</html>
